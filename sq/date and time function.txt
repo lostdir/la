@@ -1,3 +1,6 @@
+select now();
+select curdate();
+select curtime();
 select getdata()as currentdatetime
 
 select datepart(day,getdate()) as currentdate
