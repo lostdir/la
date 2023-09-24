@@ -11,7 +11,7 @@ alter table student modify dob date;
 
 create table mark(regno int foreignkey references student(regno),maths int, dm int dbms int);
 
-alter table mark modify java varchar(10) defauolt('null');
+alter table mark modify java varchar(10) default('null');
 
 insert into mark values(7,29,24,26,23);
 
