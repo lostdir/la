@@ -24,3 +24,6 @@ select address,replace(address,'a','B') as replace_a_address from faculty_info;
 select address_upper(address)as upper_address from faculty_info;
 
 select address,lower(address) as lower_address from faculty_info;
+select find_in_set(r,'a,v,c,x,r')
+select concat_ws('_','sql','is','fun');
+select lenght('hello');
