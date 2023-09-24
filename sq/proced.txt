@@ -1,3 +1,4 @@
+std(stdid int,std_code int,sub varchar(10),mark int,phon int(10));
 DELIMITER &&  
 CREATE PROCEDURE get_merit_student () 
 BEGIN
