@@ -1,0 +1,62 @@
+create table st(regno int primary key,name varchar(10) unique,age integer notnull,dept varchar(20));
+
+insert into student values((1,'arjun',20,'computer'),
+(2,'rama;,21,'maths'),
+(3,'ram',21,'mat'),
+(4,'nandhu',23,'cse'));
+
+insert into student values(4,'balan','computer');
+
+alter table student modify dob date;
+
+create table mark(regno int foreignkey references student(regno),maths int, dm int dbms int);
+
+alter table mark modify java varchar(10) default('null');
+
+insert into mark values(7,29,24,26,23);
+
+insert into mark values(1,20,22,23),(2,29,25,26,27),(3,22,23,24);
+
+
+#########################
+CREATE TABLE customer (  
+  ID INT NOT NULL AUTO_INCREMENT,  
+  Name varchar(50) NOT NULL,  
+  City varchar(50) NOT NULL,  
+  PRIMARY KEY (ID)  
+);  
+
+CREATE TABLE contact (  
+  ID INT,  
+  Customer_Id INT,  
+  Customer_Info varchar(50) NOT NULL,  
+  Type varchar(50) NOT NULL,  
+  INDEX par_ind (Customer_Id),  
+  CONSTRAINT fk_customer FOREIGN KEY (Customer_Id)  
+  REFERENCES customer(ID)  
+  ON DELETE CASCADE  
+  ON UPDATE CASCADE  
+);  
+
+mysql> SHOW TABLES;  
+mysql> DESCRIBE customer;  
+mysql> DESCRIBE contact; 
+
+INSERT INTO customer(Name, City) VALUES  
+('Joseph', 'California'),  
+('Mary', 'NewYork'),  
+('John', 'Alaska');  
+
+INSERT INTO contact (Customer_Id, Customer_Info, Type) VALUES  
+(1, 'Joseph@javatpoint.com', 'email'),  
+(1, '121-121-121', 'work' ),  
+(1, '123-123-123', 'home'),  
+(2, 'Mary@javatpoint.com', 'email'),  
+(2, 'Mary@javatpoint.com', 'email'),  
+(2, '212-212-212', 'work'),  
+(3, 'John@javatpoint.com', 'email'),  
+(3, '313-313-313', 'home');  
+
+select * from customer;
+select * from contact;
+
