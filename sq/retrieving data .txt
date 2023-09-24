@@ -14,3 +14,8 @@ select distinct country from customer
 select * from customer order by country;
  
 select count(name),country from customer group by country; 
+
+#like
+select Name from customer where Name LIKE '_a%';
+select Name from customer where Name LIKE 'M%';
+select Name from customer where Name LIKE '%s_';
