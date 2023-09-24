@@ -11,3 +11,8 @@ select *from first_t union select * from second_t;
 select *from first_t insersect select * from second_t;
 
 select * from first_t except select * from second_t; 
+
+
+SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+FROM Orders
+INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
