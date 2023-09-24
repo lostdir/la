@@ -1,0 +1,18 @@
+create table st(regno int primary key,name varchar(10) unique,age integer notnull,dept varchar(20));
+
+insert into student values((1,'arjun',20,'computer'),
+(2,'rama;,21,'maths'),
+(3,'ram',21,'mat'),
+(4,'nandhu',23,'cse'));
+
+insert into student values(4,'balan','computer');
+
+alter table student modify dob date;
+
+create table mark(regno int foreignkey references student(regno),maths int, dm int dbms int);
+
+alter table mark modify java varchar(10) defauolt('null');
+
+insert into mark values(7,29,24,26,23);
+
+insert into mark values(1,20,22,23),(2,29,25,26,27),(3,22,23,24);

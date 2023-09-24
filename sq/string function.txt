@@ -1,0 +1,26 @@
+create table faculty_info(faculty_id int notnull primary key,first_name varchar(100),last_name varchar(100),dept_id int notnull,address varchar(120),city varchar(80),salary int);
+
+insert into faculty_info(1001,'arush','sharma',4001,'amanvihar','delhi',200000),
+   (1002,'bulbul','roy',4002,'nirmanvihar','delhi',3500)'
+  (1004,'surabh','sheema',4001,'sector128''mumbai',4000);
+  
+
+select * from faculty_info;
+
+select city,ascii(city) as ascii_code_of_column from faculty_info;
+
+select city,ascii(city) as ascii_code_of_column from faculty_info;
+
+select salary,format(salary,'c') as currency_salary from faculty_info;
+
+select address len(address) as length_of_address_column from faculty_info;
+
+select concat(first_name,last_name) as append_first_lastname from faculty_info;
+
+select reverse(first_name) as reverse_first_lastname from faculty_info;
+
+select address,replace(address,'a','B') as replace_a_address from faculty_info;
+
+select address_upper(address)as upper_address from faculty_info;
+
+select address,lower(address) as lower_address from faculty_info;

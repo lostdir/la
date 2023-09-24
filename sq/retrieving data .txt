@@ -1,0 +1,16 @@
+create table customer(cus_id int primary key,name varchar,address varchar(20),city varchar(20),pincode integer,count varchara(20));
+
+insert into customer values(200,'jack','redvalley','puebla',3452,'mexico'),(201,'joe','heaven wall','berlin',5467,'germany'),(202,'jis','bluelilly','paris',7865,'france'),(203,'gub','seag','london',0986,'uk'),(204,'lucy','dream valley','mtpz'68553);
+
+select* from customer;
+  
+
+select name from customer where country='mexico';
+
+select * from customer where country in('germany','france','uk');
+
+select distinct country from customer
+
+select * from customer order by country;
+ 
+select count(name),country from customer group by country; 

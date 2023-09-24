@@ -1,0 +1,34 @@
+create table student(id int primary key identity,admno varchar(45) not null,firstname varchar(45) not null,
+lastname varchar(45) not null,age int,city varchar(25) not null);
+
+create table fee(admno varchar(45) not null,course varchar(45) not null,amount paid int);
+
+insert into student values(3354,'luiso','evans',13,'taxes'),(2135,,'paul','wamd',15,'alsalea'),(3321,'peter','bennelt',14,'calfornia','patlerson',17,'new yorl'),(5112,'rose','huge',16,'flordia'),
+(6113,'anu','sithara',15,'airozana'),(7555,'anto','butter',14,'newyork'),
+(8345,'diego','cox',13,california);
+select * from student;
+
+insert into fee values(3354,'java',20000),
+(7555,'android',22000),
+(4321,'python',18000),
+(8345,'sql',15000),
+(5112,'machine learning',30000);
+select * from fee;
+
+inner join
+
+select student admno,student firstname,student lastname,fee,course,fee.amountpaid from student inner jpin fee on student.admno=fee.admno;
+
+select s1.firstname,s2.firstname,s2.city from student s1,student s2 where s1.id<>s2.id and s1.city=s2.city orderd by s2.city;
+
+cross join
+select student.admno,student.firstname,student lastname,fee.course,fee.amountpaid from student cross join fee where student.admno=fee.admno;
+
+leftouter join
+select student admno,student.firstname,student.lastname,fee.course,fee.amountpaid from student left outer join fee on student.admno=fee.admno;
+
+right outer join
+select student admno,student.firstname,student.lastname,fee.course,fee.amountpaid from student right outer join fee on student.admno=fee.admno;
+
+full outer join
+select student.admno,student.firstname,student.lastname,fee.course,fee.amountpaid from student full outer join fee on student.admno=fee.admno;

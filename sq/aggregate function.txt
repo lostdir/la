@@ -1,0 +1,16 @@
+create table product(pro_id int primary key,pro_name varchar(15),sup_id int,cat_id int,unit varchar(20),price int);
+
+insert into product values(300,'pen',20,'ea',10),(303,'box',4,23,'ea',19),(301,'pencil',2,21,'ca',15),(304,'pen',3,23,'ea',30),(305,'eraser',5,25,'ca',25);
+
+select * from product where price between 10 and 20
+
+select min(price) from product;
+
+select max(price) from product;
+
+select *count(pro_id) from product;
+
+select avg(price) from product;
+
+select sum(price) from product;
+

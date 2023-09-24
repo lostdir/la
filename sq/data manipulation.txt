@@ -1,0 +1,10 @@
+create table employee(emp_no int,emp_name varchar(20),emp_basic int,emp_dept varchar(20));
+insert into employee values(101,"amal",20000,"sales"),(102,'ajmal',25000,'clerk'),(103,'sajeev',30000,'HR'),(104,'malavika',27000,'hr'),(105,'rajeev',34000,'manager'));
+select * from employee;
+alter table employee add location varchar(20);
+update employee set location='ernakulam' where emp_no=101;
+update employee set location='idukki' where emp_no=103;
+update employee set location='alappuzha' where emp_no=104;
+update employee set location='kollam' where emp_no=105;
+delete from employee where emp_basic=20000;
+

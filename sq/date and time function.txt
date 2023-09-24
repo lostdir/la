@@ -1,0 +1,13 @@
+select getdata()as currentdatetime
+
+select datepart(day,getdate()) as currentdate
+
+select dateadd(day,10,getdate()) as after_10_days datetime from currentdatetime
+
+select datediff(hour,2015-11-16,2015-11-11) as differencehours between 20151116 and 2015111
+
+select convert(varchar(10),getdate())
+
+select convert(varchar(10),getdate(),10)
+
+select convert(varchar(10),getdate(),110)

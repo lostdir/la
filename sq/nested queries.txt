@@ -1,0 +1,17 @@
+create table customer(person int primary key,fname varchar(255),age int,salary int);
+
+insert into customer values((1,'priya',20,30000),(2,'veena',20,6000),(3,'vidhaya',29000),(4,'vinod',40,55000),(5,'kiran',30,36000));
+  
+select * from customer
+  
+select * from customer where personid in (select personid from customer where salary=30000);
+
+create table customer_bkp(id int foreign key reference customer (person)) fname varchar(255),age int,salary int);
+
+insert into customer_bkp select * from customer where personid in(select personid in(select personid from customer);
+
+select * from customer_bkp;
+ 
+update customer set salary=salary*0.25 where age in(select age from customer_bkp where age>=30);
+
+delete from customer_bkp where age in(select age from customer where age>=35);

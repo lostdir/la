@@ -1,0 +1,13 @@
+create table first_t(int,t_name varchar(50));
+ 
+create table second_t(id int,t_name varchar(50));
+
+insert into first_t values(1,'harry'),(2,'priya'),(3,'renu'),(4,'mary');
+
+insert into second_t values(3,'akhil'),(4,'harini'),(5,'veena'),(6,'sandra');
+
+select *from first_t union select * from second_t;
+
+select *from first_t insersect select * from second_t;
+
+select * from first_t except select * from second_t; 
