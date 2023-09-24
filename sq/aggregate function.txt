@@ -8,7 +8,7 @@ select min(price) from product;
 
 select max(price) from product;
 
-select *count(pro_id) from product;
+select count(*) pro_id from product;
 
 select avg(price) from product;
 
